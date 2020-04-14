@@ -1,6 +1,6 @@
 # My notes and examples on Causality
 
-- The Book of Why: The New Science of Cause and Effect - Dana Mackenzie and Judea Pearl [[open notes]]()
+- The Book of Why: The New Science of Cause and Effect - Dana Mackenzie and Judea Pearl [[open notes]](./the-book-of-why/notes.md)
 
 # Applications
 
