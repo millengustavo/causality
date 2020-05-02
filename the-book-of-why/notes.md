@@ -127,3 +127,23 @@ The most interesting thing to do with Bayesian networks is to solve the inverse-
 Whereas a Bayesian network can only tell us how likely one event is, given that we observed another (rung-one information), causal diagrams can answer interventional and counterfactual questions
 
 > Statisticians consider it permissible to talk about causes and effects in one situation: a **randomized controlled trial (RCT)** in which a treatment A is randomly assigned to some individuals and not to others and the observed changes in B are then compared. Here, both orthodox statistics and causal inference agree on the meaning of the sentence “A causes B.”
+
+# Ch7. Beyond Adjustment: the conquest of mount intervention
+
+## The simplest route: the Back-door adjustment formula
+
+Most familiar method of predicting the effect of an intervention is to "control" for confounder using the adjustment formula
+
+This is the method to use if you are confident that you have data on a sufficient set of variables (deconfounders) to block all the back-door paths between the intervention and the outcome
+
+> A regression coefficient not always represents a causal effect - you can't rely on the data alone to tell you the difference
+
+The back-door criterion tells us which sets of variables we can use to deconfound our data. The adjustment formula actually does the deconfounding
+
+## The Front-door criterion
+
+It allows us to control for confounders that we cannot observe, including those that we can't even name (same as RCTs, the "gold standard" of causal effect estimation)
+
+Front-door estimates do the same as RCTs, with the additional virtue of observing people's behavior in their own natural habitat instead of a laboratory.
+
+## The Do-Calculus, or mind over matter
