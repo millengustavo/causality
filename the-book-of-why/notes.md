@@ -147,3 +147,33 @@ It allows us to control for confounders that we cannot observe, including those 
 Front-door estimates do the same as RCTs, with the additional virtue of observing people's behavior in their own natural habitat instead of a laboratory.
 
 ## The Do-Calculus, or mind over matter
+
+**Front- and back-door adjustment formulas** -> the ultimate goal is to calculate the effect of an intervention, P(Y | do(X)), in terms of data such as P(Y | X, A, B, Z,…) that do not involve a do-operator -> then we can use observational data to estimate the causal effect, allowing us to leap from rung one to rung two of the Ladder of Causation
+
+### Rule 1
+> P(Y | do(X), Z, W) = P(Y | do(X), Z)
+
+Provided that the variable set Z blocks all the paths from W to Y after we have deleted all the arrows leading into X
+
+### Rule 2
+> P(Y | do(X), Z) = P(Y | X, Z)
+
+If Z satisfies the back-door criterion. Is the same as saying: after we have controlled for a sufficient deconfounding set, any remaining correlation is a genuine causal effect
+
+### Rule 3
+> P(Y | do(X)) = P(Y)
+
+If there is no path from X to Y with only forward-directed arrows. Same as: if we do something that does not affect Y, then the probability distribution of Y will not change
+
+### Syntactic interpration of the rules
+- Rule 1 permits the addition or deletion of observations. 
+- Rule 2 permits the replacement of an intervention with an observation, or vice versa. 
+- Rule 3 permits the deletion or addition of interventions
+
+### One issue with do-calculus
+It enables the construction of a proof, but it does not help us find one. It is an excellent verifier of a solution but not such a good searcher for one
+
+### Instrumental variables
+Important tool in that they help us uncover causal information that goes beyond the do-calculus. The latter insists on point estimates rather than inequalities and would give up on cases in which all we can get are inequalities. 
+
+The do-calculus is more flexible than instrumental variables. In do-calculus we make no assumptions whatsoever regarding the nature of the functions in the causal model. But if we can justify an assumption like monotonicity or linearity on scientific grounds, then a more special-purpose tool like instrumental variables is worth considering
