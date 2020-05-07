@@ -128,6 +128,45 @@ Whereas a Bayesian network can only tell us how likely one event is, given that 
 
 > Statisticians consider it permissible to talk about causes and effects in one situation: a **randomized controlled trial (RCT)** in which a treatment A is randomly assigned to some individuals and not to others and the observed changes in B are then compared. Here, both orthodox statistics and causal inference agree on the meaning of the sentence “A causes B.”
 
+# Ch4. Confounding and Deconfounding: or Slaying the Lurking Variable
+
+**Controlled experiment**: Give one group a new treatment, while the other group (control) either gets the old treatment or no special treatment at all. If, after a suitable amount of time, you see a measurable difference between the two supposedly identical groups of people, then the new treatment must be the cause of the difference
+
+*Prospective*: the groups are chosen in advance
+
+Confounding bias occurs when a variable influences both who is selected for the treatment and the outcome of the experiment. Sometimes the confounders are known; other times they are merely suspected and act as a “lurking third variable.”
+
+In a causal diagram, confounders are extremely easy to recognize: the variable Z at the center of the **fork** is a confounder of X and Y. 
+
+> The term “confounding” originally meant “mixing” in English, and we can understand from the diagram why this name was chosen. The true causal effect X -> Y is “mixed” with the spurious correlation between X and Y induced by the fork X <- Z -> Y
+
+- (1) Confounding needs and has a causal solution
+- (2) Causal diagrams provide a complete and systematic way of finding that solution
+
+## The skillful interrogation of nature: why RCTs work
+
+Randomization eliminates confounder bias and enables the researcher to quantify his uncertainty
+
+**Double blinding**: clinical trials with human subjects that conceal the treatment/control information from both the patients and the experimenters
+
+Randomization severs every incoming link to the randomized variable, including the ones we don't know about or cannot measure
+
+> The *do*-operator gives us scientifically sound ways of determining causal effects from non experimental studies. Causal estimates produced by observational studies may be labeled **"provisional causality"**: causality contingent upon the set of assumptions that our causal diagram advertises
+
+## The new paradigm of confounding
+> “Confounding is not a statistical notion. It stands for the discrepancy between what we want to assess (the causal effect) and what we actually do assess using statistical methods. If you can’t articulate mathematically what you want to assess, you can’t expect to define what constitutes a discrepancy.”
+
+**Back-door criterion**: operational test for confounding
+
+## The do-operator and the back-door criterion
+
+- (a) In a chain junction, A  B  C, controlling for B prevents information about A from getting to C or vice versa.
+- (b) Likewise, in a fork or confounding junction, A  B  C, controlling for B prevents information about A from getting to C or vice versa.
+- (c) Finally, in a collider, A  B  C, exactly the opposite rules hold. The variables A and C start out independent, so that information about A tells you nothing about C. But if you control for B, then information starts flowing through the “pipe,” due to the explain-away effect.
+- (d) Controlling for descendants (or proxies) of a variable is like “partially” controlling for the variable itself. Controlling for a descendant of a mediator partly closes the pipe; controlling for a descendant of a collider partly opens the pipe.
+
+> To deconfound two variables X and Y, we need only block every noncausal path between them without blocking or perturbing any causal paths. More precisely, a back-door path is any path from X to Y that starts with an arrow pointing into X. X and Y will be deconfounded if we block every back-door path (because such paths allow spurious correlation between X and Y). If we do this by controlling for some set of variables Z, we also need to make sure that no member of Z is a descendant of X on a causal path; otherwise we might partly or completely close off that path
+
 # Ch7. Beyond Adjustment: the conquest of mount intervention
 
 ## The simplest route: the Back-door adjustment formula
