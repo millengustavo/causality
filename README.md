@@ -4,6 +4,14 @@
 
 # Applications
 
+## Causal Diagrams
+
+[Causal Diagrams: draw your assumptions](./examples/causal_diagrams.ipynb)
+
+![causal_diagrams_dowhy](./images/causal_diagrams_dowhy.png)
+
+![causal_diagrams_causalnex](./images/causal_diagrams_causalnex.png)
+
 ## Causal Inference
 
 [Causal Impact: state-space models in settings where a randomized experiment is unavailable](https://millengustavo.github.io/causalimpact/)
